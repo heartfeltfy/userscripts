@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         V2EX 帖子弹窗预览（深浅色 + 楼中楼）
 // @namespace    workbuddy.v2ex.popup
-// @version      3.1.2
+// @version      3.1.3
 // @description  V2EX 帖子弹窗：自动签到、详情图片大图预览、楼主与全部回复头像、站点操作、卡片式回复框、楼主标识、标题吸顶、上下撑满、深浅色主题、简洁楼中楼、已读标记
 // @author       WorkBuddy
-// @homepageURL  https://github.com/heartfeltfy/v2ex-popup
-// @supportURL   https://github.com/heartfeltfy/v2ex-popup/issues
-// @updateURL    https://raw.githubusercontent.com/heartfeltfy/v2ex-popup/main/v2ex-popup.user.js
-// @downloadURL  https://raw.githubusercontent.com/heartfeltfy/v2ex-popup/main/v2ex-popup.user.js
+// @homepageURL  https://github.com/heartfeltfy/userscripts
+// @supportURL   https://github.com/heartfeltfy/userscripts/issues
+// @updateURL    https://raw.githubusercontent.com/heartfeltfy/userscripts/main/v2ex-popup.user.js
+// @downloadURL  https://raw.githubusercontent.com/heartfeltfy/userscripts/main/v2ex-popup.user.js
 // @match        https://www.v2ex.com/*
 // @match        https://v2ex.com/*
 // @run-at       document-end
@@ -1784,7 +1784,7 @@ html[data-tvp-site-ink="dark"] #tvp-checkin-toast {
         const d = currentData;
         const cell = document.querySelector('.cell[id^="r_"]');
         return {
-            version: '3.1.2',
+            version: '3.1.3',
             checkin: checkinState(),
             checkinRunning: checkinRunning,
             lightbox: {
@@ -1883,9 +1883,9 @@ html[data-tvp-site-ink="dark"] #tvp-checkin-toast {
     if (!/^\/(signin|signup|forgot|reset)/.test(location.pathname)) {
         setTimeout(function () { runCheckin(false); }, CHECKIN_DELAY);
     }
-    // 装没装对，看控制台有没有这一行即可；Tampermonkey 列表里版本号应为 3.1.2
+    // 装没装对，看控制台有没有这一行即可；Tampermonkey 列表里版本号应为 3.1.3
     console.info(
-        '%c[V2EX 弹窗] v3.1.2 已加载',
+        '%c[V2EX 弹窗] v3.1.3 已加载',
         'color:#4a9eff;font-weight:bold',
         '点击帖子弹窗预览 · __tvpDebug() 自检 · __tvpCheckin() 立即签到'
     );
